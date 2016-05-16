@@ -17,7 +17,12 @@ namespace IDoser
         /// <summary>
         /// Материал в бункере
         /// </summary>
-        Material Material { get; }
+        int MaterialId { get; }
+        string MaterialName { get; }
+        /// <summary>
+        /// Масса материала по рецепту
+        /// </summary>
+        double DoseRecipeWeigth { get; }
         /// <summary>
         /// Расчетная масса компонента по рецепту
         /// </summary>
@@ -29,7 +34,7 @@ namespace IDoser
         /// <summary>
         /// Упреждение бункера
         /// </summary>
-        double Prevention { get; }
+        int Prevention { get; }
         /// <summary>
         /// Текущая масса материала в бункере
         /// </summary>
@@ -42,6 +47,7 @@ namespace IDoser
         /// Время завершения дозирования
         /// </summary>
         DateTime TimeFinish { get; }
+
 
         int Status { get; }
 

@@ -37,6 +37,10 @@ namespace IDoser
         /// </summary>
         double DoseTargetVolume { get; }
         /// <summary>
+        /// Значение порога (кг). Вес материала который может считаться условным нулем.
+        /// </summary>
+        double EmptyWeigth { get; set; }
+        /// <summary>
         /// Текущий импользуемы бункер терминала
         /// </summary>
         IBunker CurrentUseBunker { get; }

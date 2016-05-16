@@ -44,7 +44,6 @@
     <Compile Include="ILine.cs" />
     <Compile Include="ITerminal.cs" />
     <Compile Include="LineMode.cs" />
-    <Compile Include="Material.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CombinedAddress.cs" />
     <Compile Include="TypeAddress.cs" />

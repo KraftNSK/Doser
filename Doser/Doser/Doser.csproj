@@ -69,6 +69,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Bunker.cs" />
+    <Compile Include="Models\Component.cs" />
+    <Compile Include="Models\Consumer.cs" />
+    <Compile Include="Models\Line.cs" />
+    <Compile Include="Models\Material.cs" />
+    <Compile Include="Models\Port.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Protocol.cs" />
+    <Compile Include="Models\Recipe.cs" />
+    <Compile Include="Models\RecipeElement.cs" />
+    <Compile Include="Models\Terminal.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
