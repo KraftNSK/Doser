@@ -32,6 +32,10 @@ namespace IDoser
         /// </summary>
         double DoseResultWeigth { get; }
         /// <summary>
+        /// Целевой объем дозировки
+        /// </summary>
+        double DoseTargetVolume { get; }
+        /// <summary>
         /// Упреждение бункера
         /// </summary>
         int Prevention { get; }

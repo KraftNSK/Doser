@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace IDoser
+namespace Doser.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ConfigActiveBunkers.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ConfigActiveBunkers : Window
     {
-        public void Main()
+        public ConfigActiveBunkers()
         {
             InitializeComponent();
         }

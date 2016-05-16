@@ -1,0 +1,56 @@
+﻿<Window x:Class="Doser.Views.ConfigActiveBunkers"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Doser.Views"
+        mc:Ignorable="d"
+        Title="ConfigActiveBunkers" Height="600" Width="500">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label>Производственная линия:</Label>
+            <ComboBox ></ComboBox>
+        </StackPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TreeView MinWidth="200" Grid.Column="0">
+                <TreeViewItem>
+                    <TreeViewItem>sdfsdfsdfs</TreeViewItem>
+                    <TreeViewItem>sdfsdfsdfs</TreeViewItem>
+                </TreeViewItem>
+                <TreeViewItem>2</TreeViewItem>
+                <TreeViewItem>3</TreeViewItem>
+            </TreeView>
+            <GroupBox Header="Параметры бункера:" MinWidth="200" Grid.Column="1">
+                <StackPanel>
+                    <Label>Наименование: -</Label>
+                    <Label>Материал: -</Label>
+                    <Label>Терминал: -</Label>
+                    <Label>Выход терминала: -</Label>
+                    <Label>Активный: -</Label>
+                    <Label>Упреждение, кг: -</Label>
+                    <Label>Метод отсечки: -</Label>
+                    <GroupBox Header="Импульсный режим:">
+                        <StackPanel>
+                            <Label>Старт импульсного режима, %: -</Label>
+                            <Label>Допустимая погрешность, %: -</Label>
+                            <Label>Малая доза, кг: не более -</Label>
+                            <Label>Длительность паузы, мс: -</Label>
+                            <Label>Минимальный импульс, мс: -</Label>
+                            <Label>Максимальный импульс, мс: -</Label>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Header="Примечание:">
+                        <Label>
+                            blablablabla
+                        </Label>
+                    </GroupBox>
+                </StackPanel>
+            </GroupBox>
+        </Grid>
+
+    </StackPanel>
+</Window>
