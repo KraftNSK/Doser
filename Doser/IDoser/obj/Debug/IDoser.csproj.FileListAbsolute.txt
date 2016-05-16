@@ -1,0 +1,4 @@
+D:\Doser\Doser\IDoser\bin\Debug\IDoser.dll
+D:\Doser\Doser\IDoser\bin\Debug\IDoser.pdb
+D:\Doser\Doser\IDoser\obj\Debug\IDoser.dll
+D:\Doser\Doser\IDoser\obj\Debug\IDoser.pdb

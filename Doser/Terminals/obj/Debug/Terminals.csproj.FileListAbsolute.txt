@@ -1,0 +1,7 @@
+D:\Doser\Doser\Terminals\bin\Debug\Terminals.dll
+D:\Doser\Doser\Terminals\bin\Debug\Terminals.pdb
+D:\Doser\Doser\Terminals\bin\Debug\IDoser.dll
+D:\Doser\Doser\Terminals\bin\Debug\IDoser.pdb
+D:\Doser\Doser\Terminals\obj\Debug\Terminals.csprojResolveAssemblyReference.cache
+D:\Doser\Doser\Terminals\obj\Debug\Terminals.dll
+D:\Doser\Doser\Terminals\obj\Debug\Terminals.pdb

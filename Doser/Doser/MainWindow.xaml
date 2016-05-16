@@ -1,0 +1,80 @@
+﻿<Window x:Class="IDoser.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IDoser"
+        mc:Ignorable="d"
+        Title="MainWindow" MinHeight="600" MinWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Menu x:Name="menu" Height="20" Margin="0" VerticalAlignment="Top" Grid.Row="0">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Закрыть"/>
+            </MenuItem>
+            <MenuItem Header="Правка">
+                <MenuItem Header="Активные бункера"/>
+            </MenuItem>
+            <MenuItem Header="Справочники">
+                <MenuItem Header="Рецепты"/>
+                <MenuItem Header="Продукция"/>
+                <Separator/>
+                <MenuItem Header="Потребители"/>
+                <MenuItem Header="Изделия (ЖБИ)"/>
+                <MenuItem Header="Материалы"/>
+                <Separator/>
+                <MenuItem Header="Порты"/>
+                <MenuItem Header="Линии"/>
+                <MenuItem Header="Терминалы"/>
+                <MenuItem Header="Бункеры"/>
+            </MenuItem>
+            <MenuItem Header="Отчеты">
+                <MenuItem Header="Производственный отчет"/>
+            </MenuItem>
+            <MenuItem Header="Сервис">
+                <MenuItem Header="Пользователи"/>
+                <MenuItem Header="Подключение к БД"/>
+                <MenuItem Header="Настройки"/>
+            </MenuItem>
+            <MenuItem Header="Справка">
+                <MenuItem Header="О программе..."/>
+            </MenuItem>
+        </Menu>
+        <StackPanel VerticalAlignment="Top" Grid.Row="1">
+            <GroupBox Header="Линия №1 (Лёгкая секция)" Margin="0,10,0,0" FontFamily="Arial" FontSize="20" >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition MinHeight="30"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal" Grid.Row="0" TextBlock.FontFamily="Arial" TextBlock.FontSize="16" TextBlock.FontWeight="DemiBold">
+                        <Button MinWidth="160" Grid.Column="0" Margin="2" >Выбрать рецепт</Button>
+                        <Button MinWidth="215" Grid.Column="1" Margin="2" >Задать выход продукта</Button>
+                        <Button MinWidth="160" Grid.Column="2" Margin="2" FontSize="18" Foreground="Red">СТАРТ!</Button>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,0" TextBlock.FontFamily="Arial" TextBlock.FontSize="14" TextBlock.FontWeight="DemiBold">
+                        <Label Content="Статус линии:" ></Label>
+                        <Label Content="Ожидание" Margin="0,0,20,0"></Label>
+                        <Label Content="Текушая масса (кг):"></Label>
+                        <Label Content="0"></Label>
+                    </StackPanel>
+                    <DataGrid x:Name="gridProducts" AutoGenerateColumns="False" Grid.Row="2" Margin="2,5,2,2">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Линия/Терминал/Бункер" Width="2*"  MinWidth="350" Binding="{Binding ModelName}"/>
+                            <DataGridTextColumn Header="Статус" Width="1.2*" MinWidth="100" Binding="{Binding UnitCost, StringFormat=\{0:C\}}"/>
+                            <DataGridTextColumn Header="Доза (рец.), кг" Width="*" MinWidth="100"	Binding="{Binding UnitCost, StringFormat=\{0:C\}}"/>
+                            <DataGridTextColumn Header="Доза, кг" Width="*" MinWidth="100"	Binding="{Binding UnitCost, StringFormat=\{0:C\}}"/>
+                            <DataGridTextColumn Header="Масса, кг" Width="*" MinWidth="100"	Binding="{Binding UnitCost, StringFormat=\{0:C\}}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </GroupBox>
+        </StackPanel>
+    </Grid>
+
+
+</Window>
