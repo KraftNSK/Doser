@@ -1,19 +1,17 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 
 namespace Doser.Models
 {
-    public class User
+    public class EndProduct
     {
-        [Key]
         public int Id { get; set; }
-        [Required]
         public string Name { get; set; }
-        public string Password { get; set; }
-        public int Role { get; set; }
-        
+        public string Code { get; set; }
+        public string Code1c { get; set; }
         public DateTime? TimeCreate { get; set; }
         public DateTime? TimeDeleted { get; set; }
+        public User UserCreate { get; set; }
+        public User UserDeleted { get; set; }
         public bool isDeleted { get; set; }
         public string Description { get; set; }
     }

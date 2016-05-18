@@ -15,8 +15,8 @@ namespace Doser.Models
         public double TargetWeigth { get; set; }
         public double ResultWeigth { get; set; }
         public double ProductVolume { get; set; }
-        public DateTime TimeStart { get; set; }
-        public DateTime TimeFinished { get; set; }
+        public DateTime? TimeStart { get; set; }
+        public DateTime? TimeFinished { get; set; }
         public int Status { get; set; }
     }
 }

@@ -43,8 +43,8 @@ namespace Doser
             
             var u = new User();
             u.Name = "petya";
-            u.TimeCreate = DateTime.Now;
-            u.TimeDeleted = DateTime.Now;
+            //u.TimeCreate = DateTime.Now;
+            //u.TimeDeleted = DateTime.Now;
 
             p.UserCreate = u;
             db.Users.Add(u);

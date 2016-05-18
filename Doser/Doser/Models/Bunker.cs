@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Doser.Models
 {
@@ -6,23 +7,29 @@ namespace Doser.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        [Required]
         public Material Material { get; set; }
         /// <summary>
         /// Дискретный выход терминала
         /// </summary>
+        [Required]
         public int Output { get; set; }
+        [Required]
         public Terminal Terminal { get; set; }
         /// <summary>
         /// Активность бункера
         /// </summary>
+        [Required]
         public bool isActive { get; set; }
         /// <summary>
         /// Использовать импульсный режим
         /// </summary>
+        [Required]
         public bool UseImpulseMode { get; set; }
         /// <summary>
         /// Упреждение
         /// </summary>
+        [Required]
         public int Prevention { get; set; }
         /// <summary>
         /// Длительность паузы в импульсном режиме
@@ -60,13 +67,15 @@ namespace Doser.Models
         /// <summary>
         /// Допустимая погрешность (в %)
         /// </summary>
+        [Required]
         public double Inaccuracy { get; set; }
 
 
-        public DateTime TimeCreate { get; set; }
-        public DateTime TimeDeleted { get; set; }
+        public DateTime? TimeCreate { get; set; }
+        public DateTime? TimeDeleted { get; set; }
         public User UserCreate { get; set; }
         public User UserDeleted { get; set; }
+        [Required]
         public bool isDeleted { get; set; }
         public string Description { get; set; }
     }

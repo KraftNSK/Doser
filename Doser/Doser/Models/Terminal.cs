@@ -11,8 +11,8 @@ namespace Doser.Models
         public int Address485 { get; set; }
         public string IPAddress { get; set; }
         public double EmptyWeigth { get; set; }
-        public DateTime TimeCreate { get; set; }
-        public DateTime TimeDeleted { get; set; }
+        public DateTime? TimeCreate { get; set; }
+        public DateTime? TimeDeleted { get; set; }
         public User UserCreate { get; set; }
         public User UserDeleted { get; set; }
         public bool isDeleted { get; set; }
