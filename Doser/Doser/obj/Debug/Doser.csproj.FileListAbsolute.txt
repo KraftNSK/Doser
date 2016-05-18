@@ -18,3 +18,15 @@ D:\Doser\Doser\Doser\obj\Debug\MainWindow.g.cs
 D:\Doser\Doser\Doser\obj\Debug\MainWindow.baml
 D:\Doser\Doser\Doser\obj\Debug\Views\ConfigActiveBunkers.g.cs
 D:\Doser\Doser\Doser\obj\Debug\Views\ConfigActiveBunkers.baml
+D:\Doser\Doser\Doser\bin\Debug\Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Data.dll
+D:\Doser\Doser\Doser\bin\Debug\Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.dll
+D:\Doser\Doser\Doser\bin\Debug\Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.xml
+D:\Doser\Doser\Doser\bin\Debug\Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Data.xml
+D:\Doser\Doser\Doser\obj\Debug\Views\CatalogProducts.g.cs
+D:\Doser\Doser\Doser\obj\Debug\App.baml
+D:\Doser\Doser\Doser\obj\Debug\Styles.baml
+D:\Doser\Doser\Doser\obj\Debug\Views\CatalogProducts.baml
+D:\Doser\Doser\Doser\bin\Debug\EntityFramework.dll
+D:\Doser\Doser\Doser\bin\Debug\EntityFramework.SqlServer.dll
+D:\Doser\Doser\Doser\bin\Debug\EntityFramework.xml
+D:\Doser\Doser\Doser\bin\Debug\EntityFramework.SqlServer.xml

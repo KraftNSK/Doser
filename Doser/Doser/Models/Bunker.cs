@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace IDoser.Models
+namespace Doser.Models
 {
     public class Bunker
     {

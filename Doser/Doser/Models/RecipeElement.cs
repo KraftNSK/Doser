@@ -1,4 +1,4 @@
-﻿namespace IDoser.Models
+﻿namespace Doser.Models
 {
     public class RecipeElement
     {

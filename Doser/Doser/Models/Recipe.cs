@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace IDoser.Models
+namespace Doser.Models
 {
     public class Recipe
     {
