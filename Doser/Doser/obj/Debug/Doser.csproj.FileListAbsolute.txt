@@ -24,9 +24,10 @@ D:\Doser\Doser\Doser\bin\Debug\EntityFramework.dll
 D:\Doser\Doser\Doser\bin\Debug\EntityFramework.SqlServer.dll
 D:\Doser\Doser\Doser\bin\Debug\EntityFramework.xml
 D:\Doser\Doser\Doser\bin\Debug\EntityFramework.SqlServer.xml
-D:\Doser\Doser\Doser\obj\Debug\Views\CatalogProductsView.g.cs
-D:\Doser\Doser\Doser\obj\Debug\Views\ConfigActiveBunkersView.g.cs
-D:\Doser\Doser\Doser\obj\Debug\Views\MainView.g.cs
-D:\Doser\Doser\Doser\obj\Debug\Views\MainView.baml
-D:\Doser\Doser\Doser\obj\Debug\Views\CatalogProductsView.baml
-D:\Doser\Doser\Doser\obj\Debug\Views\ConfigActiveBunkersView.baml
+D:\Doser\Doser\Doser\obj\Debug\Views\MainWindow.g.cs
+D:\Doser\Doser\Doser\obj\Debug\Views\CatalogProductsWindow.g.cs
+D:\Doser\Doser\Doser\obj\Debug\Views\ConfigActiveBunkersWindow.g.cs
+D:\Doser\Doser\Doser\obj\Debug\Views\MainWindow.baml
+D:\Doser\Doser\Doser\obj\Debug\Views\CatalogProductsWindow.baml
+D:\Doser\Doser\Doser\obj\Debug\Views\ConfigActiveBunkersWindow.baml
+D:\Doser\Doser\Doser\obj\Debug\GeneratedInternalTypeHelper.g.cs

@@ -14,15 +14,16 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Doser.Views;
 using Doser.Models;
+using Doser.ViewModels;
 
 namespace Doser
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainView : Window
+    public partial class MainWindow : Window
     {
-        public void Main()
+        public MainWindow()
         {
             InitializeComponent();
         }
@@ -30,17 +31,18 @@ namespace Doser
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
             var w = new Window();
-            (new CatalogProductsView()).Show();
+            (new CatalogProductsWindow()).Show();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
             DBModel db = new DBModel();
-            var p = new Product {Name = "Otsev", Code = "200-1", TimeCreate = DateTime.Now};
+            var p = new Product { Name = "Otsev", Code = "200-1", TimeCreate = DateTime.Now };
             p.Code1c = "0";
             p.Description = "adfas";
             p.TimeDeleted = p.TimeCreate;
-            
+
             var u = new User();
             u.Name = "petya";
             //u.TimeCreate = DateTime.Now;

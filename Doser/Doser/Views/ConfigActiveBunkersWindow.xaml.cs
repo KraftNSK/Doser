@@ -17,9 +17,9 @@ namespace Doser.Views
     /// <summary>
     /// Interaction logic for ConfigActiveBunkers.xaml
     /// </summary>
-    public partial class ConfigActiveBunkersView : Window
+    public partial class ConfigActiveBunkersWindow : Window
     {
-        public ConfigActiveBunkersView()
+        public ConfigActiveBunkersWindow()
         {
             InitializeComponent();
         }

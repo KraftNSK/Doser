@@ -17,9 +17,9 @@ namespace Doser.Views
     /// <summary>
     /// Interaction logic for CatalogProducts.xaml
     /// </summary>
-    public partial class CatalogProductsView : Window
+    public partial class CatalogProductsWindow : Window
     {
-        public CatalogProductsView()
+        public CatalogProductsWindow()
         {
             InitializeComponent();
         }
