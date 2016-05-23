@@ -8,6 +8,8 @@ namespace Doser.Models
     {
         public DBModel() : base("Server=(localdb)\\mssqllocaldb;Database=DoserDB;Trusted_Connection=True;MultipleActiveResultSets=true")
         {
+            Database.SetInitializer(new CreateDatabaseIfNotExists<DBModel>());
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<DBModel>());
         }
 
         public DbSet<Bunker> Bunkers { get; set; }

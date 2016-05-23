@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Doser\Doser\Doser\App.xaml
-41570006828
+42028799674
 
-251461076868
+251335924870
 74162481006
-MainWindow.xaml;Styles.xaml;Views\CatalogProducts.xaml;Views\ConfigActiveBunkers.xaml;
+Views\MainView.xaml;Styles.xaml;Views\CatalogProductsView.xaml;Views\ConfigActiveBunkersView.xaml;
 
 True
 

@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Doser.Views
 {
     /// <summary>
-    /// Interaction logic for CatalogProducts.xaml
+    /// Interaction logic for ConfigActiveBunkers.xaml
     /// </summary>
-    public partial class CatalogProducts : Window
+    public partial class ConfigActiveBunkersView : Window
     {
-        public CatalogProducts()
+        public ConfigActiveBunkersView()
         {
             InitializeComponent();
         }

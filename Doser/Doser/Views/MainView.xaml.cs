@@ -20,7 +20,7 @@ namespace Doser
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainView : Window
     {
         public void Main()
         {
@@ -30,7 +30,7 @@ namespace Doser
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
             var w = new Window();
-            (new CatalogProducts()).Show();
+            (new CatalogProductsView()).Show();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
