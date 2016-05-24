@@ -83,11 +83,15 @@
     <Compile Include="ViewModels\CatalogProductsWindowViewModel.cs" />
     <Compile Include="ViewModels\ConfigActiveBunkersWindowViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\MsgBoxWindowViewModel.cs" />
     <Compile Include="Views\CatalogProductsWindow.xaml.cs">
       <DependentUpon>CatalogProductsWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ConfigActiveBunkersWindow.xaml.cs">
       <DependentUpon>ConfigActiveBunkersWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MsgBoxWindow.xaml.cs">
+      <DependentUpon>MsgBoxWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -110,6 +114,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ConfigActiveBunkersWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MsgBoxWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

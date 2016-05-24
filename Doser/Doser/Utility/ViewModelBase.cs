@@ -7,9 +7,7 @@ namespace Doser.Utility
 {
     public abstract class ViewModelBase : INotifyPropertyChanged
     {
-        /// <summary>
-        /// Дочернее окно
-        /// </summary>
+        public string Name;
         private Window _wnd = null;
 
         /// 
@@ -22,21 +20,25 @@ namespace Doser.Utility
             _wnd = null;
         }
 
-        protected void ShowChildWindow(ViewModelBase viewModel, Type classNameWindow, bool isModal=false)
+        protected Window ShowChildWindow(ViewModelBase viewModel, Type classNameWindow, bool isModal = false)
         {
             viewModel._wnd = Activator.CreateInstance(classNameWindow) as Window;
-            if (viewModel._wnd == null) return;
+            if (viewModel._wnd == null) return null;
             viewModel._wnd.DataContext = viewModel;
             viewModel._wnd.Closed += (sender, e) => Closed();
             if (isModal)
+            {
                 viewModel._wnd.ShowDialog();
-            else
-                viewModel._wnd.Show();
+                return null;
+            }
+            viewModel._wnd.Show();
+            return viewModel._wnd;
         }
 
         #region INotifyPropertyChanged Members
 
-        public event PropertyChangedEventHandler PropertyChanged;
+            public event
+            PropertyChangedEventHandler PropertyChanged;
 
         #endregion
 

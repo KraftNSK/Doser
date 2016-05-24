@@ -24,6 +24,13 @@ namespace Doser
             var viewModel = new MainWindowViewModel();
             mainWindow.DataContext = viewModel;
             mainWindow.Show();
+
+            mainWindow.Closing += MainWindow_Closing;
+        }
+
+        private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            ((MainWindowViewModel) ((MainWindow) sender).DataContext).CloseAllChildWindow();
         }
     }
 }
