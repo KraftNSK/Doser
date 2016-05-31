@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Doser.Views"
+        xmlns:local="clr-namespace:Doser.ViewModels"
         mc:Ignorable="d"
         Title="CatalogProducts" Height="300" Width="400">
     <Grid>
@@ -34,12 +34,12 @@
             </Button>
             <Button Content="удалить"></Button>
         </ToolBar>
-        <DataGrid  Grid.Row="2" AutoGenerateColumns="False" Margin="3">
+        <DataGrid  Grid.Row="2" AutoGenerateColumns="False" Margin="3" ItemsSource="{Binding DataContext.Products}">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Код" Width="*"></DataGridTextColumn>
-                <DataGridTextColumn Header="Код 1С" Width="*"></DataGridTextColumn>
-                <DataGridTextColumn Header="Наименование" Width="2*"></DataGridTextColumn>
-                <DataGridTextColumn Header="Комментарий" Width="3*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Код" Width="*" Binding="{Binding Code}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Код 1С" Width="*" Binding="{Binding Code1c}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Наименование" Width="2*"  Binding="{Binding Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Комментарий" Width="3*" Binding="{Binding Description}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
         <StatusBar Grid.Row="3" VerticalAlignment="Bottom" >

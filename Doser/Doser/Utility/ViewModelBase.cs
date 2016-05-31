@@ -2,37 +2,29 @@
 using System.ComponentModel;
 using System.Windows;
 using Doser.Views;
+using IDoser;
 
 namespace Doser.Utility
 {
-    public abstract class ViewModelBase : INotifyPropertyChanged
+    public abstract class ViewModelBase: INotifyPropertyChanged
     {
         public string Name;
-        private Window _wnd = null;
-
-        /// 
-        /// Методы вызываемый окном при закрытии
-        /// 
-        protected virtual void Closed()
-        {
-            if (_wnd == null) return;
-            _wnd.Close();
-            _wnd = null;
-        }
+        public Window Wnd { get; set; }
 
         protected Window ShowChildWindow(ViewModelBase viewModel, Type classNameWindow, bool isModal = false)
         {
-            viewModel._wnd = Activator.CreateInstance(classNameWindow) as Window;
-            if (viewModel._wnd == null) return null;
-            viewModel._wnd.DataContext = viewModel;
-            viewModel._wnd.Closed += (sender, e) => Closed();
+
+            viewModel.Wnd = Activator.CreateInstance(classNameWindow) as Window;
+            if (viewModel.Wnd == null) return null;
+            viewModel.Wnd.DataContext = viewModel;
+            viewModel.Wnd.Owner = this.Wnd;
             if (isModal)
             {
-                viewModel._wnd.ShowDialog();
+                viewModel.Wnd.ShowDialog();
                 return null;
             }
-            viewModel._wnd.Show();
-            return viewModel._wnd;
+            viewModel.Wnd.Show();
+            return viewModel.Wnd;
         }
 
         #region INotifyPropertyChanged Members

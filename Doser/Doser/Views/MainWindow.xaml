@@ -16,11 +16,11 @@
                 <MenuItem Header="Закрыть"/>
             </MenuItem>
             <MenuItem Header="Правка">
-                <MenuItem Header="Активные бункеры" Command="{Binding OpenConfigActiveBunkersCommand}" CommandParameter="Doser.Views.ConfigActiveBunkersWindow"/>
+                <MenuItem Header="Активные бункеры" Command="{Binding OpenConfigActiveBunkersWindowCommand}" CommandParameter="Doser.Views.ConfigActiveBunkersWindow"/>
             </MenuItem>
             <MenuItem Header="Справочники">
                 <MenuItem Header="Рецепты"/>
-                <MenuItem Header="Продукция" Command="{Binding OpenProductsCommand}" CommandParameter="Doser.Views.CatalogProductsWindow"/>
+                <MenuItem Header="Продукция" Command="{Binding OpenProductsWindowCommand}" CommandParameter="Doser.Views.CatalogProductsWindow"/>
                 <Separator/>
                 <MenuItem Header="Потребители"/>
                 <MenuItem Header="Изделия (ЖБИ)"/>

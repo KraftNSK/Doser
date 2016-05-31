@@ -18,19 +18,10 @@ namespace Doser
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-
-            // Initialize main window and view model
             var mainWindow = new MainWindow();
-            var viewModel = new MainWindowViewModel();
+            var viewModel = new MainWindowViewModel {Wnd = mainWindow};
             mainWindow.DataContext = viewModel;
             mainWindow.Show();
-
-            mainWindow.Closing += MainWindow_Closing;
-        }
-
-        private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            ((MainWindowViewModel) ((MainWindow) sender).DataContext).CloseAllChildWindow();
         }
     }
 }

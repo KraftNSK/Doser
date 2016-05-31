@@ -76,6 +76,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Migrations\201605230440111_InitialCreate.cs" />
+    <Compile Include="Migrations\201605230440111_InitialCreate.Designer.cs">
+      <DependentUpon>201605230440111_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DBModel.cs" />
     <Compile Include="Models\EndProduct.cs" />
     <Compile Include="Utility\RelayCommand.cs" />
@@ -148,6 +153,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Migrations\201605230440111_InitialCreate.resx">
+      <DependentUpon>201605230440111_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -12,65 +12,39 @@ namespace Doser.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
     {
-        private List<Window> _childWindows;
-
-        public ICommand OpenProductsCommand { get; set; }
-        public ICommand OpenConfigActiveBunkersCommand { get; set; }
+        public ICommand OpenProductsWindowCommand { get; set; }
+        public ICommand OpenConfigActiveBunkersWindowCommand { get; set; }
 
         public MainWindowViewModel()
         {
-            OpenProductsCommand = new RelayCommand(OpenProducts);
-            OpenConfigActiveBunkersCommand = new RelayCommand(OpenConfigActiveBunkers);
-
-            _childWindows = new List<Window>();
+            OpenProductsWindowCommand = new RelayCommand(OpenProducts);
+            OpenConfigActiveBunkersWindowCommand = new RelayCommand(OpenConfigActiveBunkers);
         }
 
-        public void CloseAllChildWindow()
+        /// <summary>
+        /// Открывает окно
+        /// </summary>
+        /// <param name="viewModel"></param>
+        /// <param name="view"></param>
+        private void OpenWindow(ViewModelBase viewModel, object view)
         {
-            
-            foreach (var w in _childWindows)
-            {
-                w.Closed -= WChilds_Closed;
-                w.Close();
-            }
-            _childWindows.Clear();
+            Type type = Type.GetType((string)view);
+
+            if (viewModel == null) throw new ArgumentNullException(nameof(viewModel));
+            if (type == null) throw new ArgumentNullException(nameof(type));
+
+            if (!ViewIsOpen(type))
+                ShowChildWindow(viewModel, type);
         }
 
         private void OpenProducts(object p)
         {
-            Type type = Type.GetType((string)p);
-            if(!ViewIsOpen(type))
-                AddChildWindow(ShowChildWindow(new CatalogProductsWindowViewModel(), type));
+            OpenWindow(new CatalogProductsWindowViewModel(), p);
         }
 
         private void OpenConfigActiveBunkers(object p)
         {
-            Type type = Type.GetType((string)p);
-            if (!ViewIsOpen(type))
-                AddChildWindow(ShowChildWindow(new ConfigActiveBunkersWindowViewModel(), type));
-        }
-
-        /// <summary>
-        /// Призакрытии дочернего окна, удалять его из списка дочерних
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void WChilds_Closed(object sender, EventArgs e)
-        {
-            _childWindows.Remove((Window) sender);
-        }
-
-        /// <summary>
-        /// Добавляет окно в список дочерних окон
-        /// </summary>
-        /// <param name="w"></param>
-        private void AddChildWindow(Window w)
-        {
-            if (w != null)
-            {
-                _childWindows.Add(w);
-                w.Closed += WChilds_Closed;
-            }
+            OpenWindow(new ConfigActiveBunkersWindowViewModel(), p);
         }
 
         /// <summary>
@@ -80,9 +54,11 @@ namespace Doser.ViewModels
         /// <returns></returns>
         private bool ViewIsOpen(Type type)
         {
-            if (_childWindows.Find(x => x.GetType() == type) != null)
+            if (type == null) throw new ArgumentNullException(nameof(type));
+
+            if (Wnd.OwnedWindows.Cast<object>().Any(w => w.GetType() == type))
             {
-                MsgBox("");
+                MessageBox.Show(this.Wnd,"Данное окно уже открыто!", "Сообщение", MessageBoxButton.OK);
                 return true;
             }
             return false;

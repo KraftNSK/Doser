@@ -33,3 +33,4 @@ D:\Doser\Doser\Doser\obj\Debug\Views\ConfigActiveBunkersWindow.baml
 D:\Doser\Doser\Doser\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\Doser\Doser\Doser\obj\Debug\Views\MsgBoxWindow.g.cs
 D:\Doser\Doser\Doser\obj\Debug\Views\MsgBoxWindow.baml
+D:\Doser\Doser\Doser\obj\Debug\Doser.Migrations.InitialCreate.resources
